@@ -12,7 +12,7 @@ export class ApicallService {
   constructor(private _http: Http) { }
 
   searchTopic(tno:number){
-    this.topicUrl = 'http://nearestpickup.herokuapp.com/'+ tno;
+    this.topicUrl = 'https://nearestpickup.herokuapp.com/'+ tno;
     return this._http.get(this.topicUrl)
           .map(res => res.json());
   }
